@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Calcular Velocidad</title>
+</head>
+<body>
+
+<h2>Calculadora de Velocidad</h2>
+
+<label>Distancia (m):</label>
+<input type="number" id="distancia"><br><br>
+
+<label>Tiempo (s):</label>
+<input type="number" id="tiempo"><br><br>
+
+<button onclick="calcular()">Calcular</button>
+
+<h3 id="resultado"></h3>
+
+<script>
+function calcular() {
+    let d = parseFloat(document.getElementById("distancia").value);
+    let t = parseFloat(document.getElementById("tiempo").value);
+    let v = d / t;
+
+    document.getElementById("resultado").innerHTML = "La velocidad es: " + v + " m/s";
+}
+</script>
+
+</body>
+</html>
